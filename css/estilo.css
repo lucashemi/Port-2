@@ -90,11 +90,11 @@ body {
 .projetos__li {
     box-sizing: border-box;
     align-items: center;
-    width: 80vw;
+    width: 100vw;
 }
 
 .projetos__img{
-    width: 80vw;
+    width: 100vw;
     overflow: hidden;
 }
 
@@ -102,7 +102,7 @@ body {
     box-sizing: border-box;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     font-size: 18px;
     text-align: center;
 
