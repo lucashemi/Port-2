@@ -1,0 +1,11 @@
+cores ok
+padding top projetos 3.5 rem
+padding top 1.5 rem main
+
+main titulo font size tava 28 foi pra 36 pra 40 pra 46 + text underline
+projetos fnt size titulo tava 26 foi pra 30
+contato tb =
+
+margin top tava 3rem  foi pra 1.5
+
+main titulo padding bottom 2rem

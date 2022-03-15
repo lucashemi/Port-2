@@ -1,0 +1,264 @@
+@font-face {
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+*{
+    --roxo-escuro: #270F2E;
+    --roxo-medio: #350B41;
+    --roxo-medio-alt: #31073b;
+    --branco-rosado: #F7DBFF;
+}
+
+body {
+    color: var(--branco-rosado);
+    background-color: var(--roxo-medio-alt);
+    font-family: 'icones', sans-serif;
+}
+
+.header {
+    background-color: var(--roxo-escuro);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.header__titulo {
+    font-size: 26px;
+}
+
+.header__botao i::before {
+    content: '\e904';
+    font-size: 24px;
+}
+
+.main {
+    width: 75%;
+    text-align: center;
+
+    padding-top: 3rem;
+
+    margin-top: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 4.5rem;
+}
+
+.main__titulo {
+    font-size: 28px;
+    font-weight: 700;
+
+    box-sizing: border-box;
+    padding: 2rem;
+    padding-bottom: 4rem;
+
+    text-decoration: underline;
+}
+
+.main__texto {
+    font-size: 18px;
+}
+
+.main__texto em {
+    font-weight: 700;
+}
+
+.projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 3.5rem;
+    margin-bottom: 3rem;
+    background-color: var(--roxo-medio);
+}
+
+.projetos__titulo {
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: underline;
+
+    margin-bottom: 3rem;
+}
+
+.projetos__li {
+    box-sizing: border-box;
+    align-items: center;
+    width: 80vw;
+}
+
+.projetos__img{
+    width: 80vw;
+    overflow: hidden;
+}
+
+.projetos__p {
+    box-sizing: border-box;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+    text-align: center;
+
+    background-color: var(--roxo-escuro);
+}
+
+.contato {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.contato__titulo {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+.contato__texto {
+    font-size: 18px;
+}
+
+.contato__li {
+    display: inline-block;
+    box-sizing: border-box;
+
+    margin: 2rem 0.3rem;
+
+    font-size: 17px;
+
+    border: 2px solid var(--branco-rosado);
+    border-radius: 5px;
+    background-color: var(--roxo-escuro);
+
+    padding: 0.7rem;
+}
+
+.rodape {
+    text-align: center;
+
+    background-color: var(--roxo-escuro);
+
+    font-size: 15px;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 375px) {
+    .menu-lateral {
+        display: none;
+    }
+
+    .contato li {
+        margin: 2rem 0.1rem;
+        padding: 0.4rem;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .menu-lateral {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .menu-lateral {
+        display: none;
+    }
+
+    .projetos__li {
+        width: 60vw;
+    }
+
+    .projetos__img{
+        width: 60vw;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .menu-lateral {
+        display: flex;
+        position: absolute;
+        right: -100vw;
+    
+        width: 23vw;
+        height: auto;
+        background-color: var(--roxo-medio);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .menu-lateral--ativo {
+        right: 0;
+        transition: .25s;
+    }
+
+    .menu-lateral__lista {
+        padding-top: 5rem;
+    }
+
+    .menu-lateral__li {
+        font-size: 20px;
+        padding-bottom: 0.7rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        display: grid;
+    }
+
+    .header__titulo {
+        columns: 2;
+        grid-row: 1;
+    }
+
+    .menu-lateral {
+        display: inline-block;
+        columns: 3;
+        grid-row: 1;
+
+        font-size: 20px;
+    }
+
+    .menu-lateral__li {
+        box-sizing: border-box;
+        padding: 0.3rem;
+
+        text-align: end;
+        margin-right: 3rem;
+    }
+
+    .menu-lateral__li a {
+        padding: 3px;
+
+        border-bottom: 2px solid transparent;
+    }
+
+    .menu-lateral__li a:hover {
+        border-color: var(--branco-rosado);
+    }
+
+    .header__botao {
+        display: none;
+    }
+
+    .projetos__li {
+        width: 55vw;
+    }
+
+    .projetos__img{
+        width: 55vw;
+        overflow: hidden;
+    }
+}
